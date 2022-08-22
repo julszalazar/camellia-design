@@ -1,0 +1,87 @@
+/* este comentario sirve para css y scss */
+body {
+  background-color: #f0ebe3;
+  font-size: 0.8 rem; }
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body header .menu {
+      background-color: #bddfe8; }
+    body header nav ul {
+      display: flex;
+      column-gap: 10px; }
+    body header nav ul li {
+      list-style: none;
+      background-color: #dcd2d2;
+      padding: 5px;
+      border-radius: 25px;
+      font-weight: bold; }
+    body header .width-navbrand {
+      width: 100%; }
+  body main {
+    padding: 1rem; }
+    body main .title {
+      text-align: center;
+      color: #576f72;
+      font-size: 60 px;
+      text-decoration: underline;
+      margin-top: 16px;
+      margin-bottom: 2rem; }
+    body main .img-parent {
+      text-align: center;
+      margin-bottom: 1rem; }
+      body main .img-parent .kate-adams-img {
+        width: 70%; }
+    body main .about-us-intro {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto; }
+    body main .about-us-main {
+      display: flex;
+      flex-direction: column;
+      background-color: #acc7c6;
+      padding: 1rem;
+      border: 5px solid #8fadac; }
+    body main .item-fixed {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+      width: 50px; }
+  body footer .bold {
+    font-weight: bold; }
+
+@media screen and (min-width: 768px) {
+  .about-us-main {
+    margin-left: 32px;
+    margin-right: 32px; } }
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1rem; }
+    body main {
+      padding: 2rem; }
+      body main .about-us-main {
+        flex-direction: row; }
+  header {
+    flex-direction: row;
+    justify-items: center;
+    padding: 0 2rem;
+    padding-top: 0.5rem; }
+  header > h1 {
+    flex: 1; }
+  .current-li {
+    display: inline-block; }
+  .text-about-us-intro {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+  .kate-intro {
+    flex: 0 100%; }
+  .img-parent {
+    margin-bottom: 0;
+    flex-basis: fit-content; }
+  .width-navbrand {
+    width: 100%; }
+  .navbar-brand {
+    color: #576f72; } }

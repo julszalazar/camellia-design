@@ -1,0 +1,139 @@
+//linea de comentario
+/* este comentario sirve para css y scss */
+@import"utilities/variables";
+
+// primer poder de sass= NESTING
+
+
+body {
+    background-color: $bg-color-body;
+    font-size: 0.8 rem;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .menu {
+            background-color: rgb(189, 223, 232);
+        }
+        nav ul {
+            display: flex;
+            column-gap: 10px;
+        }
+        nav ul li {
+            list-style: none;
+            background-color: rgb(220, 210, 210);
+            padding: 5px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .width-navbrand {
+            width: 100%;
+        }
+    }
+
+
+    main {
+        padding: 1rem;
+        .title {
+            text-align: center;
+            color: $color-title;
+            font-size: 60 px;
+            text-decoration: underline;
+            margin-top: 16px;
+            margin-bottom: 2rem;
+        }
+        .img-parent {
+            text-align: center;
+            margin-bottom: 1rem;
+
+            .kate-adams-img {
+                width: 70%;
+            }
+        }
+        .about-us-intro {
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .about-us-main {
+            display: flex;
+            flex-direction: column;
+            background-color: $bg-color-aboutusmain;
+            padding: 1rem;
+            border: $border-aboutusmain;
+        }
+        .item-fixed {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            width: 50px;
+        }
+    }
+    footer{
+        .bold{font-weight: bold;
+        } 
+    }
+}
+
+  
+@media screen and (min-width: 768px) {
+
+    .about-us-main {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1rem;
+
+        main {
+            padding: 2rem;
+
+            .about-us-main {
+                flex-direction: row;
+            }
+        }
+    }
+
+    header {
+        flex-direction: row;
+        justify-items: center;
+        padding: 0 2rem;
+        padding-top: 0.5rem;
+    }
+
+    header>h1 {
+        flex: 1;
+    }
+
+    .current-li {
+        display: inline-block;
+    }
+
+    .text-about-us-intro {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .kate-intro {
+        flex: 0 100%;
+    }
+
+    .img-parent {
+        margin-bottom: 0;
+        flex-basis: fit-content;
+    }
+
+    .width-navbrand {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        color: rgb(87, 111, 114);
+    }
+}
