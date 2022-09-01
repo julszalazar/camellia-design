@@ -1,6 +1,7 @@
 //mixin con parametros
 
-@mixin display ($value) {
-    display: $value;
+@mixin medidas ($width, $height) {
+    width: $width;
+    height: $height;
 }
 

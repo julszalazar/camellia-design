@@ -19,7 +19,7 @@ body {
             background-color: rgb(189, 223, 232);
         }
         nav ul {
-            @include display(flex);
+            display:flex;
             column-gap: 10px;
         }
         nav ul li {
@@ -59,7 +59,7 @@ body {
             margin-right: auto;
         }
         .about-us-main {
-            @include display(flex);
+            display: flex;
             flex-direction: column;
             background-color: nth($bg-color,$n:2);
             padding: 1rem;
@@ -72,7 +72,7 @@ body {
             width: 50px;
         }
         .main-container{
-            @include display(grid);
+            display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: auto auto auto auto;
             grid-template-areas:
@@ -137,8 +137,7 @@ body {
         "portfolio-left portfolio-left portfolio-left portfolio-right";
     }
     .banner > img {
-        width: 700px;
-        height: 150px;
+        @include medidas (700px, 150px)
     }
 
 }
@@ -156,8 +155,7 @@ body {
         }
 
         .banner > img {
-            width: 1000px;
-            height: 150px;
+            @include medidas (1000px, 150px)
         }
     }
 
@@ -173,7 +171,7 @@ body {
     }
 
     .current-li {
-        @include display(inline-block);
+        display: inline-block;
     }
 
     .text-about-us-intro {
