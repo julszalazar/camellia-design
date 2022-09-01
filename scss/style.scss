@@ -1,28 +1,30 @@
 //linea de comentario
 /* este comentario sirve para css y scss */
 @import"utilities/variables";
+@import"utilities/extend";
+@import"utilities/listas";
+@import"utilities/mixin";
 
-// primer poder de sass= NESTING
+
+// primer poder de sass NESTING
 
 
 body {
-    background-color: $bg-color-body;
+    background-color:nth($bg-color,$n:1);
     font-size: 0.8 rem;
 
     header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @extend %flex;
         .menu {
             background-color: rgb(189, 223, 232);
         }
         nav ul {
-            display: flex;
+            @include display(flex);
             column-gap: 10px;
         }
         nav ul li {
             list-style: none;
-            background-color: rgb(220, 210, 210);
+            background-color:nth($bg-color,$n:2);
             padding: 5px;
             border-radius: 25px;
             font-weight: bold;
@@ -57,9 +59,9 @@ body {
             margin-right: auto;
         }
         .about-us-main {
-            display: flex;
+            @include display(flex);
             flex-direction: column;
-            background-color: $bg-color-aboutusmain;
+            background-color: nth($bg-color,$n:2);
             padding: 1rem;
             border: $border-aboutusmain;
         }
@@ -69,11 +71,53 @@ body {
             right: 5px;
             width: 50px;
         }
+        .main-container{
+            @include display(grid);
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas:
+                "banner banner"
+                "about-us-left about-us-right"
+                "services services"
+                ". ."
+                ". ."
+                "portfolio-left portfolio-right";
+            justify-content: center;
+            justify-items: center;
+            row-gap: 2rem;
+            column-gap: 1rem;  
+        }
+
+        .banner {
+            grid-area: banner;
+          }
+          
+          .about-us-left {
+            grid-area: about-us-left;
+          }
+          
+          .about-us-right {
+            grid-area: about-us-right;
+            margin-top: 2rem;
+          }
+          
+          .portfolio-left {
+            grid-area: portfolio-left;
+          }
+          
+          .portfolio-right {
+            grid-area: portfolio-right;
+          }
+          
+          .services {
+            grid-area: services;
+          }
     }
     footer{
         .bold{font-weight: bold;
         } 
     }
+
 }
 
   
@@ -82,6 +126,19 @@ body {
     .about-us-main {
         margin-left: 32px;
         margin-right: 32px;
+    }
+    .main-container{
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "banner banner banner banner"
+        "about-us-left about-us-right about-us-right about-us-right"
+        "services services services services"
+        ". . . ."
+        "portfolio-left portfolio-left portfolio-left portfolio-right";
+    }
+    .banner > img {
+        width: 700px;
+        height: 150px;
     }
 
 }
@@ -97,6 +154,11 @@ body {
                 flex-direction: row;
             }
         }
+
+        .banner > img {
+            width: 1000px;
+            height: 150px;
+        }
     }
 
     header {
@@ -111,7 +173,7 @@ body {
     }
 
     .current-li {
-        display: inline-block;
+        @include display(inline-block);
     }
 
     .text-about-us-intro {

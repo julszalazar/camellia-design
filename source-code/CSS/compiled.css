@@ -1,24 +1,25 @@
 /* este comentario sirve para css y scss */
+body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 body {
   background-color: #f0ebe3;
   font-size: 0.8 rem; }
-  body header {
+  body header .menu {
+    background-color: #bddfe8; }
+  body header nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: center; }
-    body header .menu {
-      background-color: #bddfe8; }
-    body header nav ul {
-      display: flex;
-      column-gap: 10px; }
-    body header nav ul li {
-      list-style: none;
-      background-color: #dcd2d2;
-      padding: 5px;
-      border-radius: 25px;
-      font-weight: bold; }
-    body header .width-navbrand {
-      width: 100%; }
+    column-gap: 10px; }
+  body header nav ul li {
+    list-style: none;
+    background-color: #acc7c6;
+    padding: 5px;
+    border-radius: 25px;
+    font-weight: bold; }
+  body header .width-navbrand {
+    width: 100%; }
   body main {
     padding: 1rem; }
     body main .title {
@@ -48,13 +49,41 @@ body {
       bottom: 5px;
       right: 5px;
       width: 50px; }
+    body main .main-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "banner banner" "about-us-left about-us-right" "services services" ". ." ". ." "portfolio-left portfolio-right";
+      justify-content: center;
+      justify-items: center;
+      row-gap: 2rem;
+      column-gap: 1rem; }
+    body main .banner {
+      grid-area: banner; }
+    body main .about-us-left {
+      grid-area: about-us-left; }
+    body main .about-us-right {
+      grid-area: about-us-right;
+      margin-top: 2rem; }
+    body main .portfolio-left {
+      grid-area: portfolio-left; }
+    body main .portfolio-right {
+      grid-area: portfolio-right; }
+    body main .services {
+      grid-area: services; }
   body footer .bold {
     font-weight: bold; }
 
 @media screen and (min-width: 768px) {
   .about-us-main {
     margin-left: 32px;
-    margin-right: 32px; } }
+    margin-right: 32px; }
+  .main-container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "banner banner banner banner" "about-us-left about-us-right about-us-right about-us-right" "services services services services" ". . . ." "portfolio-left portfolio-left portfolio-left portfolio-right"; }
+  .banner > img {
+    width: 700px;
+    height: 150px; } }
 
 @media (min-width: 1024px) {
   body {
@@ -63,6 +92,9 @@ body {
       padding: 2rem; }
       body main .about-us-main {
         flex-direction: row; }
+    body .banner > img {
+      width: 1000px;
+      height: 150px; }
   header {
     flex-direction: row;
     justify-items: center;

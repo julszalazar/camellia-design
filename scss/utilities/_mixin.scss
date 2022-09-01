@@ -1,0 +1,6 @@
+//mixin con parametros
+
+@mixin display ($value) {
+    display: $value;
+}
+
