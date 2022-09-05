@@ -5,7 +5,7 @@ body header {
   align-items: center; }
 
 body {
-  background-color: #f0ebe3;
+  background-color: white;
   font-size: 0.8 rem; }
   body header .menu {
     background-color: #bddfe8; }
@@ -20,6 +20,11 @@ body {
     font-weight: bold; }
   body header .width-navbrand {
     width: 100%; }
+  body .banner {
+    width: 100%;
+    height: 70vh;
+    background-image: url(../Img/banner.png);
+    background-position: center; }
   body main {
     padding: 1rem; }
     body main .title {
@@ -53,13 +58,11 @@ body {
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto auto;
-      grid-template-areas: "banner banner" "about-us-left about-us-right" "services services" ". ." ". ." "portfolio-left portfolio-right";
+      grid-template-areas: "about-us-left about-us-right" "services services" ". ." ". ." "portfolio-left portfolio-right";
       justify-content: center;
       justify-items: center;
       row-gap: 2rem;
       column-gap: 1rem; }
-    body main .banner {
-      grid-area: banner; }
     body main .about-us-left {
       grid-area: about-us-left; }
     body main .about-us-right {
@@ -70,20 +73,68 @@ body {
     body main .portfolio-right {
       grid-area: portfolio-right; }
     body main .services {
-      grid-area: services; }
+      grid-area: services;
+      width: 100%;
+      height: 30vh;
+      background-image: url(../Img/banner2.jpg);
+      background-position: center; }
+    body main .portfolio-container {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(8, auto);
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      grid-template-areas: "corporate corporate" ". ." "residential residential" ". ." "commercial commercial" ". ." "organization organization" ". ."; }
+    body main .corporate {
+      grid-area: corporate; }
+    body main .residential {
+      grid-area: residential; }
+    body main .commercial {
+      grid-area: commercial; }
+    body main .organization {
+      grid-area: organization; }
+    body main .youtube-iframe {
+      width: 120px;
+      height: 120px; }
+    body main .hidden-on-mobile {
+      display: none; }
+    body main .subdiv-contact-form > label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem; }
+    body main .subdiv-contact-form > input {
+      height: 1.5rem;
+      width: 100%;
+      margin-bottom: 1rem; }
+    body main .contact-form {
+      text-align: center;
+      margin: auto;
+      margin-top: 16px;
+      background-color: lightgray;
+      border: 3px solid darkgray;
+      padding: 1rem; }
+    body main textarea {
+      width: 100%;
+      margin-bottom: 1rem; }
+    body main .submit {
+      margin-top: 24px; }
   body footer .bold {
     font-weight: bold; }
 
 @media screen and (min-width: 768px) {
-  .about-us-main {
+  body main .about-us-main {
     margin-left: 32px;
     margin-right: 32px; }
-  .main-container {
+  body main .main-container {
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "banner banner banner banner" "about-us-left about-us-right about-us-right about-us-right" "services services services services" ". . . ." "portfolio-left portfolio-left portfolio-left portfolio-right"; }
-  .banner > img {
-    width: 700px;
-    height: 150px; } }
+    grid-template-areas: "about-us-left about-us-right about-us-right about-us-right" "services services services services" ". . . ." "portfolio-left portfolio-left portfolio-left portfolio-right"; }
+  body main .portfolio-container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "corporate corporate corporate" ". . ." "residential residential residential" ". . ." "commercial commercial commercial" ". . ." "organization organization organization" ". . ."; }
+  body main .contact-form {
+    width: 80%; }
+  body main .hidden-on-mobile {
+    display: block; } }
 
 @media (min-width: 1024px) {
   body {
@@ -92,9 +143,15 @@ body {
       padding: 2rem; }
       body main .about-us-main {
         flex-direction: row; }
-    body .banner > img {
-      width: 1000px;
-      height: 150px; }
+      body main .youtube-iframe {
+        width: auto;
+        height: auto; }
+      body main .subdiv-contact-form {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; }
+      body main .contact-form {
+        width: 50%; }
   header {
     flex-direction: row;
     justify-items: center;
