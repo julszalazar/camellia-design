@@ -5,21 +5,23 @@ body header {
   align-items: center; }
 
 body {
-  background-color: white;
+  background-color: whitesmoke;
   font-size: 0.8 rem; }
-  body header .menu {
-    background-color: white; }
-  body header nav ul {
-    display: flex;
-    column-gap: 10px; }
-  body header nav ul li {
-    list-style: none;
-    background-color: white;
-    padding: 5px;
-    border-radius: 25px;
-    font-weight: bold; }
-  body header .width-navbrand {
-    width: 100%; }
+  body header {
+    background-color: #d3eaef; }
+    body header .menu {
+      background-color: white; }
+    body header nav ul {
+      display: flex;
+      column-gap: 10px; }
+    body header nav ul li {
+      list-style: none;
+      background-color: #d3eaef;
+      padding: 5px;
+      border-radius: 25px;
+      font-weight: bold; }
+    body header .width-navbrand {
+      width: 100%; }
   body .banner {
     width: 100%;
     height: 70vh;
@@ -28,6 +30,7 @@ body {
     position: relative; }
     body .banner .text-banner-index {
       background-color: lightblue;
+      color: black;
       width: 30%;
       position: absolute;
       bottom: 10%;
@@ -39,7 +42,7 @@ body {
     padding: 1rem; }
     body main .title {
       text-align: center;
-      color: #576f72;
+      color: rgba(174, 93, 18, 0.983);
       font-size: 60 px;
       text-decoration: underline;
       margin-top: 16px;
@@ -61,9 +64,9 @@ body {
     body main .about-us-main {
       display: flex;
       flex-direction: column;
-      background-color: #d4eeed;
+      background-color: #e3eff4;
       padding: 1rem;
-      border: 5px solid #8fadac; }
+      border: 3px solid #bc7639; }
     body main .item-fixed {
       position: fixed;
       bottom: 5px;
@@ -97,7 +100,7 @@ body {
       padding: auto;
       grid-area: services;
       width: 100%;
-      height: 30vh;
+      height: 40vh;
       text-align: center;
       background-image: url(../Img/banner2.jpg);
       background-position: center; }
@@ -156,8 +159,8 @@ body {
       margin: auto;
       margin-top: 16px;
       background-color: #e3eff4;
-      border: 3px solid #bc7639;
-      padding: 1rem; }
+      padding: 1rem;
+      border: 3px solid #bc7639; }
     body main textarea {
       width: 100%;
       margin-bottom: 1rem; }
@@ -215,4 +218,6 @@ body {
       body main .width-navbrand {
         width: 100%; }
       body main .navbar-brand {
-        color: #576f72; } }
+        color: #576f72; }
+      body main .services {
+        height: 30vh; } }

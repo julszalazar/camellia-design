@@ -12,6 +12,7 @@ body {
     font-size: 0.8 rem;
 
     header {
+        background-color: nth($bg-color,$n:4);
         @extend %flex;
         .menu {
             background-color: white;
@@ -22,7 +23,7 @@ body {
         }
         nav ul li {
             list-style: none;
-            background-color:white;
+            background-color:nth($bg-color,$n:4);
             padding: 5px;
             border-radius: 25px;
             font-weight: bold;
@@ -40,6 +41,7 @@ body {
         position: relative;
         .text-banner-index{
             background-color: lightblue;
+            color:black;
             width: 30%;
             position:absolute;
             bottom: 10%;
@@ -85,7 +87,7 @@ body {
         .about-us-main {
             display: flex;
             flex-direction: column;
-            background-color: nth($bg-color,$n:2);
+            background-color: rgb(227, 239, 244);
             padding: 1rem;
             border: $border-aboutusmain;
         }
@@ -143,7 +145,7 @@ body {
             padding: auto;
             grid-area: services;
             width: 100%;
-            height: 30vh;
+            height: 40vh;
             text-align: center;
             background-image: url(../Img/banner2.jpg);
             background-position: center;
@@ -230,10 +232,10 @@ body {
             text-align: center;
             margin: auto;
             margin-top: 16px;
-          
             background-color: rgb(227, 239, 244);
-            border: 3px solid rgb(188, 118, 57);
             padding: 1rem;
+            border: $border-aboutusmain;
+ 
           }
           
           textarea {
@@ -341,6 +343,10 @@ body {
             .navbar-brand {
                     color: rgb(87, 111, 114);
                 }  
+            
+                .services{
+                    height: 30vh;
+                }
         }
         
 
