@@ -14,7 +14,7 @@ body {
     header {
         @extend %flex;
         .menu {
-            background-color: rgb(189, 223, 232);
+            background-color: white;
         }
         nav ul {
             display:flex;
@@ -22,7 +22,7 @@ body {
         }
         nav ul li {
             list-style: none;
-            background-color:nth($bg-color,$n:2);
+            background-color:white;
             padding: 5px;
             border-radius: 25px;
             font-weight: bold;
@@ -37,6 +37,17 @@ body {
         height: 70vh;
         background-image: url(../Img/banner.png);
         background-position: center;
+        position: relative;
+        .text-banner-index{
+            background-color: lightblue;
+            width: 30%;
+            position:absolute;
+            bottom: 10%;
+            left: 10%;
+            padding: 1rem;
+            opacity: 0.85;
+            text-align: center;
+        }
     }
     main {
         padding: 1rem;
@@ -55,6 +66,16 @@ body {
             .kate-adams-img {
                 width: 70%;
             }
+        }
+
+        .aboutus-index{
+            width: 95%;
+
+        }
+
+        .love-img{
+            width: 50%;
+            height: 50%;
         }
         .about-us-intro {
             max-width: 50%;
@@ -86,18 +107,22 @@ body {
                 "portfolio-left portfolio-right";
             justify-content: center;
             justify-items: center;
-            row-gap: 2rem;
+            row-gap: 4rem;
             column-gap: 1rem;  
         }
 
-          
+          .portfolio-img{
+            width: 90%;
+            height: 90%;
+          }
           .about-us-left {
             grid-area: about-us-left;
           }
           
           .about-us-right {
             grid-area: about-us-right;
-            margin-top: 2rem;
+            margin-top: 3rem;
+
           }
           
           .portfolio-left {
@@ -106,16 +131,52 @@ body {
           
           .portfolio-right {
             grid-area: portfolio-right;
+
+          }
+
+          .portfolio-right-img{
+            width: 100%;
+            height: 100%;
           }
           
           .services {
+            padding: auto;
             grid-area: services;
             width: 100%;
             height: 30vh;
+            text-align: center;
             background-image: url(../Img/banner2.jpg);
             background-position: center;
+            .text-services-index{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .subtitle{
+                margin-top: 3.5%;
+            }
+          }
+          .line-separator{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 4px solid black;
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .service-item{
+            text-align: center;
+            .short-index-text{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+
+            }          
           }
           .portfolio-container {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
             display: grid;
             grid-template-columns: repeat(2, auto);
             grid-template-rows: repeat(8, auto);
@@ -170,8 +231,8 @@ body {
             margin: auto;
             margin-top: 16px;
           
-            background-color: lightgray;
-            border: 3px solid darkgray;
+            background-color: rgb(227, 239, 244);
+            border: 3px solid rgb(188, 118, 57);
             padding: 1rem;
           }
           
@@ -202,25 +263,11 @@ body {
             .main-container{
             grid-template-rows: auto auto auto auto;
             grid-template-areas:
-            "about-us-left about-us-right about-us-right about-us-right"
+            "about-us-left about-us-left about-us-right about-us-right"
             "services services services services"
             ". . . ."
-            "portfolio-left portfolio-left portfolio-left portfolio-right";
-        }
-    
-            .portfolio-container {
-            grid-template-columns: repeat(3, auto);
-            grid-template-areas:
-              "corporate corporate corporate"
-              ". . ."
-              "residential residential residential"
-              ". . ."
-              "commercial commercial commercial"
-              ". . ."
-              "organization organization organization"
-              ". . .";
-          }
-        
+            "portfolio-left portfolio-left portfolio-right portfolio-right";
+        }  
             .contact-form {
             width: 80%;
           }
@@ -235,6 +282,21 @@ body {
 }
 
 @media (min-width: 1024px) {
+
+    header {
+        flex-direction: row;
+        justify-items: center;
+        padding: 0 2rem;
+        padding-top: 0.5rem;
+
+        header>h1 {
+            flex: 1;
+        }
+    
+        .current-li {
+            display: inline-block;
+        }
+    }
     body {
         font-size: 1rem;
 
@@ -244,58 +306,48 @@ body {
             .about-us-main {
                 flex-direction: row;
             }
-            .youtube-iframe {
-                width: auto;
-                height: auto;
+            .portfolio-img{
+                width: 300px;
+                height: 185px;
               }
-              .subdiv-contact-form {
+            .subdiv-contact-form {
                 width: 50%;
                 margin-left: auto;
                 margin-right: auto;
               }
-              .contact-form {
+            .contact-form {
                 width: 50%;
               }
+              
+              .text-about-us-intro {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        
+            .kate-intro {
+                    flex: 0 100%;
+                }
+            
+            .img-parent {
+                    margin-bottom: 0;
+                    flex-basis: fit-content;
+                }
+            
+            .width-navbrand {
+                    width: 100%;
+                }
+            
+            .navbar-brand {
+                    color: rgb(87, 111, 114);
+                }  
         }
         
 
     }
 
-    header {
-        flex-direction: row;
-        justify-items: center;
-        padding: 0 2rem;
-        padding-top: 0.5rem;
-    }
+    
+    
 
-    header>h1 {
-        flex: 1;
-    }
-
-    .current-li {
-        display: inline-block;
-    }
-
-    .text-about-us-intro {
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .kate-intro {
-        flex: 0 100%;
-    }
-
-    .img-parent {
-        margin-bottom: 0;
-        flex-basis: fit-content;
-    }
-
-    .width-navbrand {
-        width: 100%;
-    }
-
-    .navbar-brand {
-        color: rgb(87, 111, 114);
-    }
+    
 }
