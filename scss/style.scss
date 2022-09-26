@@ -123,18 +123,20 @@ body {
 
     .main-container {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: auto;
       grid-template-rows: auto auto auto auto;
       grid-template-areas:
-        "aboutus-banner aboutus-banner"
-        "about-us-left about-us-right"
-        "services services"
-        ". ."
-        ". ."
-        "portfolio-banner portfolio-banner"
-        "portfolio-left portfolio-right";
-      //". ."
-      //". .";
+        "aboutus-banner"
+        "about-us-left"
+        "about-us-right"
+        "services"
+        "."
+        "."
+        "."
+        "."
+        "portfolio-banner"
+        "portfolio-left"
+        "portfolio-right";
 
       justify-content: center;
       justify-items: center;
@@ -158,7 +160,7 @@ body {
     }
 
     .portfolio-banner {
-      padding: auto;
+      padding: 1rem;
       grid-area: portfolio-banner;
       width: 100%;
       text-align: center;
@@ -169,27 +171,23 @@ body {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
-      }
-
-
-      .subtitle {
-        margin-top: 3.5%;
+        margin-bottom: 0px;
       }
     }
 
     .aboutus-banner {
-      padding: auto;
+      padding: 1rem;
       grid-area: aboutus-banner;
       width: 100%;
       text-align: center;
       background-image: url(../Img/woodbanner.png);
       background-position: center;
-      padding-top: 3.5%;
 
       .text-services-index {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 0px;
       }
     }
 
@@ -209,7 +207,7 @@ body {
     }
 
     .services {
-      padding: auto;
+      padding: 1rem;
       grid-area: services;
       width: 100%;
       text-align: center;
@@ -220,11 +218,9 @@ body {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 0px;
       }
 
-      .subtitle {
-        margin-top: 3.5%;
-      }
     }
 
     .line-separator {

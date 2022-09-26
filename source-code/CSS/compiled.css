@@ -79,9 +79,9 @@ body {
         width: 50px; }
     body main .main-container {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: auto;
       grid-template-rows: auto auto auto auto;
-      grid-template-areas: "aboutus-banner aboutus-banner" "about-us-left about-us-right" "services services" ". ." ". ." "portfolio-banner portfolio-banner" "portfolio-left portfolio-right";
+      grid-template-areas: "aboutus-banner" "about-us-left" "about-us-right" "services" "." "." "." "." "portfolio-banner" "portfolio-left" "portfolio-right";
       justify-content: center;
       justify-items: center;
       row-gap: 4rem;
@@ -94,7 +94,7 @@ body {
     body main .about-us-right {
       grid-area: about-us-right; }
     body main .portfolio-banner {
-      padding: auto;
+      padding: 1rem;
       grid-area: portfolio-banner;
       width: 100%;
       text-align: center;
@@ -103,21 +103,20 @@ body {
       body main .portfolio-banner .text-services-index {
         width: 50%;
         margin-left: auto;
-        margin-right: auto; }
-      body main .portfolio-banner .subtitle {
-        margin-top: 3.5%; }
+        margin-right: auto;
+        margin-bottom: 0px; }
     body main .aboutus-banner {
-      padding: auto;
+      padding: 1rem;
       grid-area: aboutus-banner;
       width: 100%;
       text-align: center;
       background-image: url(../Img/woodbanner.png);
-      background-position: center;
-      padding-top: 3.5%; }
+      background-position: center; }
       body main .aboutus-banner .text-services-index {
         width: 50%;
         margin-left: auto;
-        margin-right: auto; }
+        margin-right: auto;
+        margin-bottom: 0px; }
     body main .portfolio-left {
       grid-area: portfolio-left; }
     body main .portfolio-right {
@@ -126,7 +125,7 @@ body {
       width: 100%;
       height: 100%; }
     body main .services {
-      padding: auto;
+      padding: 1rem;
       grid-area: services;
       width: 100%;
       text-align: center;
@@ -135,9 +134,8 @@ body {
       body main .services .text-services-index {
         width: 50%;
         margin-left: auto;
-        margin-right: auto; }
-      body main .services .subtitle {
-        margin-top: 3.5%; }
+        margin-right: auto;
+        margin-bottom: 0px; }
     body main .line-separator {
       margin-top: 1rem;
       margin-bottom: 1rem;
