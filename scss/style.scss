@@ -8,352 +8,446 @@
 
 
 body {
-    background-color:nth($bg-color,$n:1);
-    font-size: 0.8 rem;
+  background-color: nth($bg-color, $n: 1);
+  font-size: 0.8 rem;
 
-    header {
-        background-color: nth($bg-color,$n:4);
-        @extend %flex;
-        .menu {
-            background-color: white;
-        }
-        nav ul {
-            display:flex;
-            column-gap: 10px;
-        }
-        nav ul li {
-            list-style: none;
-            background-color:nth($bg-color,$n:4);
-            padding: 5px;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-        .width-navbrand {
-            width: 100%;
-        }
+  header {
+    background-color: nth($bg-color, $n: 4);
+    @extend %flex;
+
+    .menu {
+      background-color: white;
     }
 
-    .banner{
-        width: 100%;
-        height: 70vh;
-        background-image: url(../Img/banner.png);
-        background-position: center;
-        position: relative;
-        .text-banner-index{
-            background-color: lightblue;
-            color:black;
-            width: 30%;
-            position:absolute;
-            bottom: 10%;
-            left: 10%;
-            padding: 1rem;
-            opacity: 0.85;
-            text-align: center;
-        }
+    nav ul {
+      display: flex;
+      column-gap: 10px;
     }
-    main {
-        padding: 1rem;
-        .title {
-            text-align: center;
-            color: $color-title;
-            font-size: 60 px;
-            text-decoration: underline;
-            margin-top: 16px;
-            margin-bottom: 2rem;
-        }
-        .img-parent {
-            text-align: center;
-            margin-bottom: 1rem;
 
-            .kate-adams-img {
-                width: 70%;
-            }
-        }
-
-        .aboutus-index{
-            width: 95%;
-
-        }
-
-        .love-img{
-            width: 50%;
-            height: 50%;
-        }
-        .about-us-intro {
-            max-width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .about-us-main {
-            display: flex;
-            flex-direction: column;
-            background-color: rgb(227, 239, 244);
-            padding: 1rem;
-            border: $border-aboutusmain;
-        }
-        .item-fixed {
-            position: fixed;
-            bottom: 5px;
-            right: 5px;
-            width: 50px;
-        }
-        .main-container{
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto auto auto;
-            grid-template-areas:
-                "about-us-left about-us-right"
-                "services services"
-                ". ."
-                ". ."
-                "portfolio-left portfolio-right";
-            justify-content: center;
-            justify-items: center;
-            row-gap: 4rem;
-            column-gap: 1rem;  
-        }
-
-          .portfolio-img{
-            width: 90%;
-            height: 90%;
-          }
-          .about-us-left {
-            grid-area: about-us-left;
-          }
-          
-          .about-us-right {
-            grid-area: about-us-right;
-            margin-top: 3rem;
-
-          }
-          
-          .portfolio-left {
-            grid-area: portfolio-left;
-          }
-          
-          .portfolio-right {
-            grid-area: portfolio-right;
-
-          }
-
-          .portfolio-right-img{
-            width: 100%;
-            height: 100%;
-          }
-          
-          .services {
-            padding: auto;
-            grid-area: services;
-            width: 100%;
-            height: 40vh;
-            text-align: center;
-            background-image: url(../Img/banner2.jpg);
-            background-position: center;
-            .text-services-index{
-                width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .subtitle{
-                margin-top: 3.5%;
-            }
-          }
-          .line-separator{
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 4px solid black;
-            width: 20%;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          .service-item{
-            text-align: center;
-            .short-index-text{
-                width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-
-            }          
-          }
-          .portfolio-container {
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            display: grid;
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: repeat(8, auto);
-            grid-column-gap: 1rem;
-            grid-row-gap: 1rem;
-            grid-template-areas:
-              "corporate corporate"
-              ". ."
-              "residential residential"
-              ". ."
-              "commercial commercial"
-              ". ."
-              "organization organization"
-              ". .";
-          }
-          
-          .corporate {
-            grid-area: corporate;
-          }
-          .residential {
-            grid-area: residential;
-          }
-          .commercial {
-            grid-area: commercial;
-          }
-          .organization {
-            grid-area: organization;
-          }
-          
-          .youtube-iframe {
-            width: 120px;
-            height: 120px;
-          }
-          
-          .hidden-on-mobile {
-            display: none;
-          }
-          
-          .subdiv-contact-form > label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.75rem;
-          }
-          
-          .subdiv-contact-form > input {
-            height: 1.5rem;
-            width: 100%;
-            margin-bottom: 1rem;
-          }
-          .contact-form {
-            text-align: center;
-            margin: auto;
-            margin-top: 16px;
-            background-color: rgb(227, 239, 244);
-            padding: 1rem;
-            border: $border-aboutusmain;
- 
-          }
-          
-          textarea {
-            width: 100%;
-            margin-bottom: 1rem;
-          }
-          
-          .submit {
-            margin-top: 24px;
-          }
+    nav ul li {
+      list-style: none;
+      background-color: nth($bg-color, $n: 4);
+      padding: 5px;
+      border-radius: 25px;
+      font-weight: bold;
     }
-    footer{
-        .bold{font-weight: bold;
-        } 
+
+    .width-navbrand {
+      width: 100%;
     }
+  }
+
+  .banner {
+    width: 100%;
+    height: 70vh;
+    background-image: url(../Img/banner.png);
+    background-position: center;
+    position: relative;
+
+    .text-banner-index {
+      background-color: lightblue;
+      color: black;
+      width: 100%;
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      padding: 1rem;
+      opacity: 0.85;
+      text-align: center;
+    }
+  }
+
+  .subtitle-color {
+    color: $color-title;
+  }
+
+  main {
+    padding: 1rem;
+
+    .title {
+      text-align: center;
+      color: $color-title;
+      font-size: 60 px;
+      text-decoration: underline;
+      margin-top: 16px;
+      margin-bottom: 2rem;
+    }
+
+    .subtitle-color {
+      color: $color-title;
+    }
+
+    .img-parent {
+      text-align: center;
+      margin-bottom: 1rem;
+
+      .kate-adams-img {
+        width: 70%;
+      }
+    }
+
+    .aboutus-index {
+      width: 95%;
+
+    }
+
+    .love-img {
+      width: 50%;
+      height: 50%;
+    }
+
+    .about-us-intro {
+      max-width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-us-main {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(227, 239, 244);
+      padding: 1rem;
+      border: $border-aboutusmain;
+    }
+
+    .item-fixed {
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+
+      img {
+        width: 50px;
+      }
+
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "aboutus-banner aboutus-banner"
+        "about-us-left about-us-right"
+        "services services"
+        ". ."
+        ". ."
+        "portfolio-banner portfolio-banner"
+        "portfolio-left portfolio-right";
+      //". ."
+      //". .";
+
+      justify-content: center;
+      justify-items: center;
+      row-gap: 4rem;
+      column-gap: 1rem;
+    }
+
+    .portfolio-img {
+      width: 90%;
+      height: 90%;
+    }
+
+    .about-us-left {
+      grid-area: about-us-left;
+    }
+
+    .about-us-right {
+      grid-area: about-us-right;
+
+
+    }
+
+    .portfolio-banner {
+      padding: auto;
+      grid-area: portfolio-banner;
+      width: 100%;
+      text-align: center;
+      background-image: url(../Img/woodbanner.png);
+      background-position: center;
+
+      .text-services-index {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+
+      .subtitle {
+        margin-top: 3.5%;
+      }
+    }
+
+    .aboutus-banner {
+      padding: auto;
+      grid-area: aboutus-banner;
+      width: 100%;
+      text-align: center;
+      background-image: url(../Img/woodbanner.png);
+      background-position: center;
+      padding-top: 3.5%;
+
+      .text-services-index {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .portfolio-left {
+      grid-area: portfolio-left;
+    }
+
+    .portfolio-right {
+      grid-area: portfolio-right;
+
+    }
+
+
+    .portfolio-right-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .services {
+      padding: auto;
+      grid-area: services;
+      width: 100%;
+      text-align: center;
+      background-image: url(../Img/woodbanner.png);
+      background-position: center;
+
+      .text-services-index {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .subtitle {
+        margin-top: 3.5%;
+      }
+    }
+
+    .line-separator {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 4px solid black;
+      width: 20%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .service-item {
+      text-align: center;
+
+      .short-index-text {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+    }
+
+    .portfolio-container {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(8, auto);
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      grid-template-areas:
+        "corporate corporate"
+        ". ."
+        "residential residential"
+        ". ."
+        "commercial commercial"
+        ". ."
+        "organization organization"
+        ". .";
+    }
+
+    .corporate {
+      grid-area: corporate;
+    }
+
+    .residential {
+      grid-area: residential;
+    }
+
+    .commercial {
+      grid-area: commercial;
+    }
+
+    .organization {
+      grid-area: organization;
+    }
+
+    .youtube-iframe {
+      width: 120px;
+      height: 120px;
+    }
+
+    .hidden-on-mobile {
+      display: none;
+    }
+
+    .subdiv-contact-form>label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    .subdiv-contact-form>input {
+      height: 1.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form {
+      text-align: center;
+      margin: auto;
+      margin-top: 16px;
+      background-color: rgb(227, 239, 244);
+      padding: 1rem;
+      border: $border-aboutusmain;
+
+    }
+
+    textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .submit {
+      margin-top: 24px;
+    }
+  }
+
+  footer {
+    .bold {
+      font-weight: bold;
+    }
+  }
 
 }
 
-  
+
 @media screen and (min-width: 768px) {
-    body{
-        main{
-            .about-us-main {
-            margin-left: 32px;
-            margin-right: 32px;
-        }
-            .main-container{
-            grid-template-rows: auto auto auto auto;
-            grid-template-areas:
-            "about-us-left about-us-left about-us-right about-us-right"
-            "services services services services"
-            ". . . ."
-            "portfolio-left portfolio-left portfolio-right portfolio-right";
-        }  
-            .contact-form {
-            width: 80%;
-          }
-        
-            .hidden-on-mobile {
-            display: block;
-          }
-        }
+  body {
+    .banner {
+      .text-banner-index {
+        width: 30%;
+        bottom: 10%;
+        left: 10%;
+      }
     }
-    
+
+    main {
+      .about-us-main {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-container {
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+          "aboutus-banner aboutus-banner aboutus-banner aboutus-banner"
+          "about-us-left about-us-left about-us-right about-us-right"
+          "services services services services"
+          ". . . ."
+          "portfolio-banner portfolio-banner portfolio-banner portfolio-banner"
+          "portfolio-left portfolio-left portfolio-right portfolio-right";
+        ;
+      }
+
+      .contact-form {
+        width: 80%;
+      }
+
+      .hidden-on-mobile {
+        display: block;
+      }
+    }
+  }
+
 
 }
 
 @media (min-width: 1024px) {
 
-    header {
+  header {
+    flex-direction: row;
+    justify-items: center;
+    padding: 0 2rem;
+    padding-top: 0.5rem;
+
+    header>h1 {
+      flex: 1;
+    }
+
+    .current-li {
+      display: inline-block;
+    }
+  }
+
+  body {
+    font-size: 1rem;
+
+    main {
+      padding: 2rem;
+
+      .about-us-main {
         flex-direction: row;
-        justify-items: center;
-        padding: 0 2rem;
-        padding-top: 0.5rem;
+        width: 75%;
 
-        header>h1 {
-            flex: 1;
-        }
-    
-        .current-li {
-            display: inline-block;
-        }
-    }
-    body {
-        font-size: 1rem;
+      }
 
-        main {
-            padding: 2rem;
+      .portfolio-img {
+        width: 300px;
+        height: 185px;
+      }
 
-            .about-us-main {
-                flex-direction: row;
-            }
-            .portfolio-img{
-                width: 300px;
-                height: 185px;
-              }
-            .subdiv-contact-form {
-                width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-              }
-            .contact-form {
-                width: 50%;
-              }
-              
-              .text-about-us-intro {
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        
-            .kate-intro {
-                    flex: 0 100%;
-                }
-            
-            .img-parent {
-                    margin-bottom: 0;
-                    flex-basis: fit-content;
-                }
-            
-            .width-navbrand {
-                    width: 100%;
-                }
-            
-            .navbar-brand {
-                    color: rgb(87, 111, 114);
-                }  
-            
-                .services{
-                    height: 30vh;
-                }
-        }
-        
+      .subdiv-contact-form {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
+      .contact-form {
+        width: 50%;
+      }
+
+      .text-about-us-intro {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .kate-intro {
+        flex: 0 100%;
+      }
+
+      .img-parent {
+        margin-bottom: 0;
+        flex-basis: fit-content;
+      }
+
+      .width-navbrand {
+        width: 100%;
+      }
+
+      .navbar-brand {
+        color: rgb(87, 111, 114);
+      }
     }
 
-    
-    
 
-    
+  }
+
+
+
+
+
 }

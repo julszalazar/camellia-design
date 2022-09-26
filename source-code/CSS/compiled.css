@@ -31,13 +31,15 @@ body {
     body .banner .text-banner-index {
       background-color: lightblue;
       color: black;
-      width: 30%;
+      width: 100%;
       position: absolute;
-      bottom: 10%;
-      left: 10%;
+      bottom: 0%;
+      left: 0%;
       padding: 1rem;
       opacity: 0.85;
       text-align: center; }
+  body .subtitle-color {
+    color: rgba(174, 93, 18, 0.983); }
   body main {
     padding: 1rem; }
     body main .title {
@@ -47,6 +49,8 @@ body {
       text-decoration: underline;
       margin-top: 16px;
       margin-bottom: 2rem; }
+    body main .subtitle-color {
+      color: rgba(174, 93, 18, 0.983); }
     body main .img-parent {
       text-align: center;
       margin-bottom: 1rem; }
@@ -70,13 +74,14 @@ body {
     body main .item-fixed {
       position: fixed;
       bottom: 5px;
-      right: 5px;
-      width: 50px; }
+      right: 5px; }
+      body main .item-fixed img {
+        width: 50px; }
     body main .main-container {
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto auto auto;
-      grid-template-areas: "about-us-left about-us-right" "services services" ". ." ". ." "portfolio-left portfolio-right";
+      grid-template-areas: "aboutus-banner aboutus-banner" "about-us-left about-us-right" "services services" ". ." ". ." "portfolio-banner portfolio-banner" "portfolio-left portfolio-right";
       justify-content: center;
       justify-items: center;
       row-gap: 4rem;
@@ -87,8 +92,32 @@ body {
     body main .about-us-left {
       grid-area: about-us-left; }
     body main .about-us-right {
-      grid-area: about-us-right;
-      margin-top: 3rem; }
+      grid-area: about-us-right; }
+    body main .portfolio-banner {
+      padding: auto;
+      grid-area: portfolio-banner;
+      width: 100%;
+      text-align: center;
+      background-image: url(../Img/woodbanner.png);
+      background-position: center; }
+      body main .portfolio-banner .text-services-index {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; }
+      body main .portfolio-banner .subtitle {
+        margin-top: 3.5%; }
+    body main .aboutus-banner {
+      padding: auto;
+      grid-area: aboutus-banner;
+      width: 100%;
+      text-align: center;
+      background-image: url(../Img/woodbanner.png);
+      background-position: center;
+      padding-top: 3.5%; }
+      body main .aboutus-banner .text-services-index {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto; }
     body main .portfolio-left {
       grid-area: portfolio-left; }
     body main .portfolio-right {
@@ -100,9 +129,8 @@ body {
       padding: auto;
       grid-area: services;
       width: 100%;
-      height: 40vh;
       text-align: center;
-      background-image: url(../Img/banner2.jpg);
+      background-image: url(../Img/woodbanner.png);
       background-position: center; }
       body main .services .text-services-index {
         width: 50%;
@@ -170,12 +198,17 @@ body {
     font-weight: bold; }
 
 @media screen and (min-width: 768px) {
+  body .banner .text-banner-index {
+    width: 30%;
+    bottom: 10%;
+    left: 10%; }
   body main .about-us-main {
-    margin-left: 32px;
-    margin-right: 32px; }
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto; }
   body main .main-container {
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "about-us-left about-us-left about-us-right about-us-right" "services services services services" ". . . ." "portfolio-left portfolio-left portfolio-right portfolio-right"; }
+    grid-template-areas: "aboutus-banner aboutus-banner aboutus-banner aboutus-banner" "about-us-left about-us-left about-us-right about-us-right" "services services services services" ". . . ." "portfolio-banner portfolio-banner portfolio-banner portfolio-banner" "portfolio-left portfolio-left portfolio-right portfolio-right"; }
   body main .contact-form {
     width: 80%; }
   body main .hidden-on-mobile {
@@ -196,7 +229,8 @@ body {
     body main {
       padding: 2rem; }
       body main .about-us-main {
-        flex-direction: row; }
+        flex-direction: row;
+        width: 75%; }
       body main .portfolio-img {
         width: 300px;
         height: 185px; }
@@ -218,6 +252,4 @@ body {
       body main .width-navbrand {
         width: 100%; }
       body main .navbar-brand {
-        color: #576f72; }
-      body main .services {
-        height: 30vh; } }
+        color: #576f72; } }
